@@ -1,0 +1,60 @@
+header {
+    position: fixed;
+    height: auto;
+    width: 100%;
+
+  }
+.rm-navBar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px auto;
+    width: 100%;
+    min-width: 60%;
+    padding: 0px 1.5rem;
+    background: transparent;
+}
+.rm-navBar-logo{
+    display: flex;
+    height: 80px;
+    width: 80px;
+    justify-content: flex-start;
+    color: #ffffff;
+}
+.rm-navBar-services ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+.rm-navBar-services li{
+    padding: 0 20px;
+    font-size: .95rem;
+    font-weight: 700;
+}
+.rm-navBar-services li a {
+    text-decoration: none;
+}
+.rm-navBar-services li a:hover{
+    color: rgb(181, 174, 194);
+    border-bottom: 2px solid rgb(82, 68, 48);
+    transition: all 0.1s ease 0s;
+}
+.rm-navBar-services button{
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    border: 1px solid rgb(49, 47, 43);
+    background: transparent;
+    transition: all 0.1s ease 0s;
+}
+.rm-navBar-services button:hover{
+    border-color: rgb(255, 255, 255) ;
+    background:rgb(40,100,236) ;
+}
+.navbar.scrolled {
+    background-color: #ffffff;
+    color: #121212;
+  }

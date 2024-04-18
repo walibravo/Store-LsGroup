@@ -6,18 +6,18 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentIndex = 0;
   
     function showSlide(index) {
-        slides.forEach((slide, i) => {
-          if (i === index) {
-            slide.style.display = "block";
-          } else {
-            slide.style.display = "none";
-          }
-        });
-        const dots = Array.from(dotsContainer.children);
-        dots.forEach((dot, i) => {
-          dot.classList.toggle("active", i === index);
-        });
-      }
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.style.display = "block";
+        } else {
+          slide.style.display = "none";
+        }
+      });
+      const dots = Array.from(dotsContainer.children);
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
   
     function nextSlide() {
       currentIndex = (currentIndex + 1) % slides.length;
@@ -46,4 +46,13 @@ document.addEventListener("DOMContentLoaded", function() {
   
     setInterval(nextSlide, 5000); 
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navItems = document.querySelector('.navItems');
+
+    hamburgerMenu.addEventListener('click', function () {
+        navItems.classList.toggle('active');
+    });
+});
   
