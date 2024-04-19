@@ -1,18 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
     font-style: normal;
-
-}
-
-.poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    border: 0;
 }
 
 a:link {
@@ -20,18 +12,28 @@ a:link {
     color: #121212;
 
 }
+a:visited{
+    color: #121212;
+}
 
 .promotionStore {
     text-align: center;
     height: 30px;
     background-color: #121212;
     color: aliceblue;
+
+}
+.promotionStore span{
+    font-size: smaller;
 }
 
 .navBarMain {
     width: 100%;
     justify-content: center;
     display: flex;
+    background-color: #ffffff;
+    color: #121212;
+    align-items: center;
 
 
 }
@@ -39,11 +41,11 @@ a:link {
 .navBarContainer {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding: 20px;
     align-items: center;
     max-width: 1100px;
     width: 90%;
-
+    align-items: center;
 }
 
 .navBarContainer img {
@@ -56,6 +58,7 @@ a:link {
     justify-content: space-around;
     width: 400px;
     transition: transform 0.3s ease;
+    align-items: center;
 
 }
 
@@ -83,30 +86,89 @@ a:link {
 
 .navBarBackground{
     background-image: url('/public/imagenes/ls-group.jpg');
+    max-width: 100vw;
     height: 100vh;
-    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+
 }
 .headerBanner{
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 0 10%;
     display: flex;
-
+    justify-content: center;
+    flex-direction: column;
 
 }
 .headerBanner2 {
     display: flex;
     flex-direction: column;
+   
+}
+.headerBanner button{
+    padding: 20px 40px;
+    background-color: #121212;
+    color: #bebebe;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 0;
+}
+.headerBanner button:hover{
+    cursor: pointer;
 }
 .headerBannerText{
-    font-size: xx-large;
-    font-weight: 700;
+    font-size: 50px;
+    max-width: 700px;
+    margin-bottom: 30px;
+    line-height: 6rem
+    
+    
+}
+.headerBannerText h1{
+    font-weight: 600;
+    
+}
+.headerBannerText p{
+    font-size: medium;
+    
     
 }
 
+/* SPONSOR */
+
+.sponsorsContainer{
+    display:  flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    
+   
+}
+.sponsorImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+.sponsorImage img{
+    filter: grayscale(20);
+    max-width: 60%;
+    max-height: 70%;
+}
+
+
+
 .sectionStoreBanner {
     display: flex;
-    width: 100%;
-    justify-content: center;
+    max-width: 100%;
+    padding: 0 9.6rem;
     margin: 50px 0px;
     gap: 2rem;
 
@@ -115,7 +177,7 @@ a:link {
 .listCategory {
     color: #121212;
     border-radius: 10px;
-    background: #e0e0e0;
+    background: #f3f3f3;
     box-shadow: -20px 20px 60px #bebebe,
         20px -20px 60px #ffffff;
 }
@@ -153,15 +215,17 @@ a:link {
 
 .carousel-slide {
     flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 }
 
 .carousel-slide img {
     aspect-ratio: 16/9;
-
-    max-width: 500px;
-    max-height: 12000px;
+    max-width: 80%;
+    max-height: 90%;
     transition: all ease-in-out 3s;
 
 }
@@ -194,6 +258,7 @@ a:link {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 5%;
 
 }
 
@@ -320,6 +385,7 @@ a:link {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 5%;
 
 }
 
@@ -434,7 +500,8 @@ a:link {
     align-items: center;
     margin: 20px 0;
     gap: 2rem;
-    padding-bottom: 20PX;
+    padding: 20px 0;
+    
 }
 
 .featuresItems {
@@ -448,7 +515,9 @@ a:link {
     background: #ffffff;
     box-shadow: 20px 20px 60px #bebebe,
         -20px -20px 60px #ffffff;
-    margin: 0 20x;
+        margin: 0 10px;
+    
+   
 }
 .featuresItems span{
     color: #6C7275;
@@ -523,24 +592,36 @@ footer {
     width: 20px;
     padding: 0 10px;
 }
+@media screen and (max-width:900px) {
+    .navBarBackground{
+        background-position: center;
+    
+    }
+    
+}
+@media screen and (max-width: 680px) {
 
-
-@media screen and (max-width: 768px) {
     .navBarMain ul {
-        display: none; /* Ocultar la lista en pantallas más pequeñas */
+        display: none; 
         position: absolute;
         top: 80px;
         left: 0;
+        max-width: 100%;
         background-color: #fff;
-        width: 100%;
         flex-direction: column;
-        padding: 20px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         z-index: 1;
+        text-align: center;
+        transition: transform 0.3s ease;
+        padding: 30px 0
     }
 
     .navBarMain ul.active {
         display: flex; 
+        background-color: #ffffff;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
     }
 
     .navBarContainer {
@@ -549,9 +630,42 @@ footer {
 
     .hamburger-menu {
         display: flex; 
+
+    }
+    
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .navBarBackground{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+    }
+    
+    .headerBannerText{
+        font-size: 30px;
+        font-weight: 700;
+        
+    }
+    .sponsorsContainer{
+        display:  flex;
+        flex-direction: column;
+    
+    }
+    .sponsorImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .carousel-container{
         display: none;
+    }
+    .sectionStoreBanner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .banner {
         flex-direction: column;
@@ -566,6 +680,15 @@ footer {
         margin-right: 0;
         margin-bottom: 20px;
     }
+
+    .features {
+         display: flex;
+         flex-direction: column;
+         flex:  1;
+         justify-content: center;
+
+    }
+    
 }
 
 @media screen and (max-width: 600px) {
